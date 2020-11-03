@@ -3,15 +3,17 @@ import React from "react";
 export default class CourseListItem extends React.Component{
     constructor(props) {
       super(props);
-      this.state = {courseData : {title: "Astroespacial", teacher: "Lucas Muñoz"}};
+      this.state = props.courseData || {title: "none", teacher: "none"};
     }
   
     render() {
       return (
-        <div className={"course-item-box center-text"}>
-          <div className={"course-title"}><a href="">{this.state.courseData.title}</a></div>
-          <div className={"course-teacher"}>{this.state.courseData.teacher}</div>
-        </div>
+        <a href="">
+            <div className={"course-item-box center-text"}>
+                <div className={"course-title text-medium"}>{this.state.title}</div>
+                <div className={"text-small"}>Profesor: {this.state.teacher}</div>
+            </div>
+        </a>
       )
     }
   }

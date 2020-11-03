@@ -34,16 +34,16 @@ class Login extends React.Component{
 
     render() {
         return (
-            <div className={"overlay-card login-overlay-size"} id="login">
+            <div className={"login-overlay-size"} id="login">
                 <Form onSubmit={this.loginSubmit}>
                     <div className={"login-form"}>
                         <Form.Group>
-                            <Form.Label>Usuario</Form.Label>
+                            <Form.Label className={"text-small text-white"}>Usuario</Form.Label>
                             <Form.Control required id="email" type="email" placeholder="Enter email" onChange={this.onValueChange} value={this.state.email}/>
                         </Form.Group>
 
                         <Form.Group>
-                            <Form.Label>Contraseña</Form.Label>
+                            <Form.Label className={"text-small text-white"}>Contraseña</Form.Label>
                             <Form.Control required id={"password"} type="password" placeholder="Password" onChange={this.onValueChange} value={this.state.password}/>
                         </Form.Group>
                     </div>
