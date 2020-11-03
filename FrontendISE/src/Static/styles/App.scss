@@ -1,0 +1,273 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/forms";
+@import "../../../node_modules/bootstrap/scss/buttons";
+
+a {
+  text-decoration: none;
+}
+
+#student-header {
+    background-color: #000000;
+    color: white;
+    hr {
+        color: yellow;
+        height: 5px;
+    }
+}
+
+.course-box {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.course-item-box {
+    background-color: black;
+    top: 10%;
+    width: 430px;
+    height: 320px;
+    border-radius: 25px;
+    margin: 20px 40px;
+    color: white;
+}
+
+.course-title {
+    height:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+#login {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    height:15%;
+    min-height:15%;
+    max-height:100%;
+}
+
+.login-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+#login-button{
+    display: flex;
+    justify-content: center;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../images/Earth.jpg");
+  /* Full height */
+  padding-top: 50px;
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.center-text{
+  text-align: center;
+}
+.margin-top-20{
+  margin-top: 20px;
+}
+
+body{
+  font-family: "Segoe UI Light",serif;
+}
+
+.float-left{
+  float: left;
+}
+.margin-top-normal{
+  padding-top: 15%;
+}
+.padding-left-50{
+  padding-left: 50px;
+}
+.padding-left-70{
+  padding-left: 70px;
+}
+.padding-left-10{
+  padding-left: 10px;
+}
+.padding-top-7{
+  padding-top: 7px;
+}
+.padding-right-30{
+  padding-right: 30px;
+}
+
+.padding-top-10{
+  padding-top: 10px;
+}
+
+.move-left-30{
+  margin-left: -20px;
+}
+.padding-top-20{
+  margin-top: 30px;
+}
+.padding-bottom-30{
+  padding-bottom: 30px;
+}
+.padding-bottom-50{
+  padding-bottom: 50px;
+}
+.padding-bottom-70{
+  padding-bottom: 70px;
+}
+.color-positive{
+  color: #2CC24A;
+}
+
+.color-negative {
+  color: #D95656;
+}
+
+.font-size-title{
+  font-size: 100px;
+}
+.font-color-title{
+  color: #949191;
+}
+
+.font-size-subtitle{
+  font-size: 50px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.main-btn-shape{
+  width: 400px;
+  height: 90px;
+  padding-top: 5px;
+  display: inline-block;
+  margin-top: 50px;
+  border-radius: 30px;
+}
+
+
+.main-btn-bgcolor{
+  background-color: #3B4DF1;
+}
+.main-btn-color{
+  color: white;
+}
+
+.login-btn{
+  float: right;
+  position: relative;
+  top: 65px;
+  right: 100px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  width: 110px;
+  height: 40px;
+  color: #949191;
+  font-size: 20px;
+  padding-top: 5px;
+  border-color: #949191;
+}
+
+.standard-btn{
+  border-style: solid;
+  text-align: center;
+  border-radius: 10px;
+  border-width: 1px;
+  min-width: 110px;
+  min-height: 40px;
+  padding: 5px 10px 0 10px;
+  color: #949191;
+  font-size: 20px;
+  border-color: #949191;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.login-btn:hover{
+  box-shadow: 0 0 10px 1px #00000020;
+}
+
+.ayuda-btn:hover{
+  font-size: 22px;
+  width: 53px;
+}
+
+.main-btn-shape:hover{
+  box-shadow: 0 0 10px 1px #00000070;
+  font-size: 52px;
+}
+
+.overlay-card{
+  position: absolute;
+  z-index: 1000;
+
+  top: 10%;
+  left: 50%;
+
+
+  border: 3px solid black;
+  border-radius: 30px;
+  background-color: ghostwhite;
+  padding: 40px;
+}
+
+.login-overlay-size{
+  width: 700px;
+  height: 800px;
+  margin-top: 0;
+  margin-left: -300px;
+}
+
+.reglog-form{
+  margin-right: 50px;
+}
