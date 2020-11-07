@@ -11,6 +11,14 @@ module.exports = {
       duration: {
         type: Sequelize.FLOAT
       },
+      activityId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Actvities',
+          key: 'id'
+        },
+        onDelete: 'CASCADE',
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

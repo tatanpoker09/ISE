@@ -11,6 +11,14 @@ module.exports = {
       username: {
         type: Sequelize.STRING
       },
+      schoolId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Schools',
+          key: 'id'
+        },
+        onDelete: 'CASCADE',
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

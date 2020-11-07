@@ -3,8 +3,8 @@
 /**
  * Module dependencies.
  */
-
-import models, { sequelize } from '../models';
+const {models, sequelize} = require('../models')
+// import models, { sequelize } from '../models';
 var app = require('../app');
 var debug = require('debug')('backendise:server');
 var http = require('http');

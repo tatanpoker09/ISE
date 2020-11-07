@@ -14,6 +14,14 @@ module.exports = {
       options: {
         type: Sequelize.STRING
       },
+      testId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Tests',
+          key: 'id'
+        },
+        onDelete: 'CASCADE',
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
