@@ -81,12 +81,10 @@ a:visited {
 }
 
 #login {
-    position: absolute;
-    top: 65%;
-    left: 45%;
     height:15%;
     min-height:15%;
     max-height:100%;
+    margin: 100px 0;
 }
 
 .login-form {
@@ -99,16 +97,16 @@ a:visited {
     justify-content: center;
 }
 
-.bg {
-  /* The image used */
-  background-image: url("../images/Earth.jpg");
-  /* Full height */
-  padding-top: 50px;
-  height: 100vh;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.lander-container {
+    background-color: #332f36;
+    padding-top: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
 .title {
@@ -305,7 +303,6 @@ body{
   width: 700px;
   height: 800px;
   margin-top: 0;
-  margin-left: -300px;
 }
 
 .reglog-form{

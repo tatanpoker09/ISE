@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../Static/styles/App.scss';
 import Login from "./Login";
+import Logo from '../../Static/images/logo_ISE_white.svg';
 import {withRouter} from 'react-router-dom';
 import {Form, Button} from "react-bootstrap";
 
@@ -13,13 +14,10 @@ export default class LanderView extends React.Component {
     render() {
         return (
             <div>
-              <div className={"shadow"}></div>
-              <div className={"bg"}>
-                  <div className={"title font-size-title center-text font-color-title"}>
-                      Interactive Space Education
-                  </div>
-              </div>
-              <Login></Login>
+                <div className={"lander-container"}>
+                    <img src={Logo} alt={"ISE"} />
+                    <Login></Login>
+                </div>
             </div>
         );
     }
