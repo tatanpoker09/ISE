@@ -4,7 +4,7 @@ import {withRouter} from 'react-router-dom';
 class CourseListItem extends React.Component{
     constructor(props) {
       super(props);
-      this.state = {courseData : {title: "Astroespacial", teacher: "Lucas Muñoz"}};
+      this.state = {courseData : props.courseData || {title: "none", teacher: "none"}};
       this.goToCourse = this.goToCourse.bind(this);
     }
     
@@ -18,10 +18,12 @@ class CourseListItem extends React.Component{
 
     render() {
       return (
-        <div className={"course-item-box center-text"}>
-          <div className={"course-title"}><a onClick={this.goToCourse}>{this.state.courseData.title}</a></div>
-          <div className={"course-teacher"}>{this.state.courseData.teacher}</div>
-        </div>
+        <a href="">
+            <div className={"course-item-box center-text"}>
+                <div className={"course-title text-medium"}>{this.state.courseData.title}</div>
+                <div className={"text-small"}>Profesor: {this.state.courseData.teacher}</div>
+            </div>
+        </a>
       )
     }
   }

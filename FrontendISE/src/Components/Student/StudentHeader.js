@@ -9,8 +9,7 @@ export default class CourseList extends React.Component{
   render() {
     return (
         <div id="student-header">
-            <div>{this.state.username}</div>
-            <hr></hr>
+            <a><div className={"text-small"}>{this.state.username}</div></a>
         </div>
         
     )
