@@ -11,8 +11,8 @@ class ActivityView extends React.Component {
     }
 
     componentDidMount(){
-        let data = JSON.parse(localStorage.getItem('currentCourse'));
-        this.setState({courseData: data});
+        //let data = JSON.parse(localStorage.getItem('currentCourse'));
+        //this.setState({courseData: data});
     }
 
     render() {
