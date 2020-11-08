@@ -6,7 +6,7 @@ import '../../Static/styles/App.scss';
 class Login extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {email: "", password: "", remember: false};
+        this.state = {username: "", password: ""};
         this.setAuthenticationData = props.setAuthData;
         this.onValueChange = this.onValueChange.bind(this);
         this.loginSubmit = this.loginSubmit.bind(this);
@@ -14,14 +14,11 @@ class Login extends React.Component{
 
     onValueChange(e){
         switch(e.target.id) {
-            case 'email':
-                this.setState({email: e.target.value});
+            case 'username':
+                this.setState({username: e.target.value});
                 break;
             case 'password':
                 this.setState({password: e.target.value});
-                break;
-            case 'remember':
-                this.setState({remember: e.target.value});
                 break;
         }
     }
@@ -29,7 +26,7 @@ class Login extends React.Component{
     loginSubmit(e) {
         e.preventDefault();
         //Login function.
-        this.props.history.push('/courses');
+        this.props.history.push('/code');
     }
 
     render() {
@@ -39,7 +36,7 @@ class Login extends React.Component{
                     <div className={"login-form"}>
                         <Form.Group>
                             <Form.Label>Usuario</Form.Label>
-                            <Form.Control required id="email" type="email" placeholder="Enter email" onChange={this.onValueChange} value={this.state.email}/>
+                            <Form.Control required id="username" type="username" placeholder="Username" onChange={this.onValueChange} value={this.state.username}/>
                         </Form.Group>
 
                         <Form.Group>
@@ -48,8 +45,8 @@ class Login extends React.Component{
                         </Form.Group>
                     </div>
                     <div id="login-button">
-                        <Button variant="primary" type="submit">
-                            Log In
+                        <Button variant="secondary" type="submit">
+                            Ingresar
                         </Button>
                     </div>
                 </Form>
