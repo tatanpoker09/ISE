@@ -1,5 +1,6 @@
 import React from "react";
 import CourseListItem from "./CourseListItem";
+import {Button} from "react-bootstrap";
 
 export default class CourseList extends React.Component{
   constructor(props) {
@@ -26,6 +27,7 @@ export default class CourseList extends React.Component{
           return <CourseListItem courseData={course} />
         })}
       </div>
+      <Button href={"/pdf-report.pdf"}>Generate Report</Button>
     </div>
     )
   }
