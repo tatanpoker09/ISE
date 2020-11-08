@@ -4,7 +4,13 @@ import CourseListItem from "./CourseListItem";
 export default class CourseList extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {courses : []};
+    this.state = {courses : [
+      {title: "Astroespacial", teacher: "Lucas Muñoz"},
+      {title: "Ecología", teacher: "Elias Sabja"},
+      {title: "Programación", teacher: "Tatan Poker"},
+      {title: "Manualidades", teacher: "Diego bustamante"},
+      {title: "Lider espacial", teacher: "Cristobal Sali"},
+    ]};
   }
 
   componentDidMount(){
@@ -14,14 +20,12 @@ export default class CourseList extends React.Component{
   render() {
     return (
     <div>
-        <div id={'course-box'}>
-          <CourseListItem courseData={""}/>
-          <CourseListItem /> 
-          <CourseListItem /> 
-          <CourseListItem /> 
-          <CourseListItem /> 
-          <CourseListItem />  
-        </div>
+      <div id={"courses-title"} className={"text-large"}> Cursos </div>
+      <div id={'courses-box'}>
+        {this.state.courses.map((course) => {
+          return <CourseListItem courseData={course} />
+        })}
+      </div>
     </div>
     )
   }

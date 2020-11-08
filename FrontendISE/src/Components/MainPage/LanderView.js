@@ -12,13 +12,14 @@ export default class LanderView extends React.Component {
 
     render() {
         return (
-            <div> 
-                <div className={"bg"}>
-                    <div className={"title font-size-title center-text font-color-title"}>
-                        Interactive Space Education
-                    </div>
-                </div>
-                <Login></Login>
+            <div>
+              <div className={"shadow"}></div>
+              <div className={"bg"}>
+                  <div className={"title font-size-title center-text font-color-title"}>
+                      Interactive Space Education
+                  </div>
+              </div>
+              <Login></Login>
             </div>
         );
     }
