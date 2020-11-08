@@ -4,6 +4,7 @@ export default class ActivityListItem extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {activity: ""};
     }
 
     render() {

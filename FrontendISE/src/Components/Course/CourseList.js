@@ -14,7 +14,7 @@ export default class CourseList extends React.Component{
   }
 
   componentDidMount(){
-    //Get courses and update state.
+    //Get student courses and update state.
   }
 
   render() {
