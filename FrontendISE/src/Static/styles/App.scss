@@ -41,11 +41,29 @@ a:visited {
     z-index: -1;
 }
 
-#student-header {
+.custom-header {
     background-color: #000000;
     color: white;
     text-align: right;
     padding: 20px 40px;
+}
+
+.activity-item-box {
+  display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40vw;
+    margin: 20px auto;
+}
+.activity-item {
+  background-color: black;
+    padding: 40px 15px;
+    width: 450px;
+    height: 120px;
+    border-radius: 25px;
+    margin: 20px 20px;
+    color: white;
+
 }
 
 #courses-title {

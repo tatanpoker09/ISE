@@ -8,7 +8,7 @@ export default class CourseList extends React.Component{
 
   render() {
     return (
-        <div id="student-header">
+        <div className="custom-header">
             <a><div className={"text-small"}>{this.state.username}</div></a>
         </div>
         
