@@ -10,6 +10,7 @@ import ActivityView from './Components/Activity/ActivityView';
 import CourseListView from './Components/Course/CourseListView';
 import CourseView from './Components/Course/CourseView';
 import CodeView from './Components/Student/CodeView';
+import ReportView from "./Components/Reports/ReportView";
 
 export const BACKEND_HOST = "localhost:3001";
 
@@ -23,6 +24,7 @@ ReactDOM.render(
     <Route path="/course"> <CourseView /></Route>
     <Route path="/activity"><ActivityView /></Route>
     <Route path="/code"><CodeView /></Route>
+    <Route path="/report"><ReportView /></Route>
   </BrowserRouter>,
   document.getElementById('root')
 );
