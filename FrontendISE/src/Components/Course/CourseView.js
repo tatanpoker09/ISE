@@ -1,5 +1,5 @@
 import React from 'react';
-import ActivityListItem from '../Activity/ActivityListItem';
+import ActivityItem from '../Activity/ActivityItem';
 import {Button} from "react-bootstrap";
 
 export default class CourseView extends React.Component{

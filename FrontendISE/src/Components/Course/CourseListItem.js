@@ -28,5 +28,4 @@ class CourseListItem extends React.Component{
       )
     }
   }
-
   export default withRouter(CourseListItem);
