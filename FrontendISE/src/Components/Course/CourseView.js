@@ -37,7 +37,7 @@ export default class CourseView extends React.Component{
           <div className={"activity-item"}>
             Actividad actual
             <h1 key={this.state.currentCourse.title}>{this.state.currentCourse.title}</h1>
-            <Button onClick={enterActivity}>Ingresar</Button>
+            <Button onClick={this.enterActivity}>Ingresar</Button>
           </div> 
           <div className={"activity-item"}>
             Actividad
