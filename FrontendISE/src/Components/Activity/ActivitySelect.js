@@ -45,19 +45,23 @@ class ActivitySelect extends React.Component{
 
     }
 
+    seeStats = (e) => {
+        e.preventDefault();
+        this.props.history.push('/report');
+    }
+
     render() {
         return (
           <div>
               <div id={"activities-select-title"} className={"text-large"}> Actividades escogidas </div>
               <div id={'activities-select-box'}>
-                  <button id={'statistics-button'} className={'normal-button'}> Ver estadísticas </button>
+                  <button id={'statistics-button'} className={'normal-button'} onClick={this.seeStats}> Ver estadísticas </button>
               </div>
               <div id={"activities-title"} className={"text-large"}> Escoger actividades </div>
               <div id={'activities-box'}>
                   {this.state.activities.map((activity) =>
                     <ActivityItem addActivity={this.addActivity} activity={activity}></ActivityItem>
                   )}
-
               </div>
           </div>
 
