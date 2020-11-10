@@ -35,7 +35,7 @@ class Login extends React.Component{
                 <Form onSubmit={this.loginSubmit}>
                     <div className={"login-form"}>
                         <Form.Group>
-                            <Form.Label>Usuario</Form.Label>
+                            <Form.Label className={"text-small text-white"}>Usuario</Form.Label>
                             <Form.Control required id="username" type="username" placeholder="Username" onChange={this.onValueChange} value={this.state.username}/>
                         </Form.Group>
 
