@@ -20,7 +20,7 @@ export default class CourseList extends React.Component{
 
   render() {
     return (
-      <div id={'courses-bg'}>
+      <div>
         <div id={"courses-title"} className={"text-large"}> Cursos </div>
         <div id={'courses-box'}>
           {this.state.courses.map((course) => {

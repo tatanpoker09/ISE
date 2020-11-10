@@ -1,5 +1,5 @@
-
 #courses-box {
+    position: relative;
     display:flex;
     background-color: #232025;
     flex-wrap: wrap;
@@ -19,6 +19,12 @@
 
 }
 
+#see-activities-button {
+    position: absolute;
+    right: 40px;
+    top: -80px;
+}
+
 
 .course-item-box {
     background-color: #3B363F;
@@ -30,3 +36,11 @@
     color: white;
     cursor: pointer;
 }
+
+.course-item-box:hover {
+    border-style: solid;
+    border-color: var(--pink);
+    border-width: 4px;
+    margin: 16px;
+}
+

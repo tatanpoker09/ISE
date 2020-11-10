@@ -10,6 +10,7 @@
     --dd: #332F36;
     --ddd: #2E292F;
     --dddd: #232025;
+    --pink: #ec97fe;
 }
 
 a {
@@ -109,6 +110,28 @@ a:visited {
 #login-button{
     display: flex;
     justify-content: center;
+}
+.normal-button {
+    background-color: var(--d);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 4px;
+
+}
+.normal-button:hover {
+    background-color: var(--dd);
+    border-style: solid ;
+    border-width: 4px;
+    margin:0;
+    border-color: var(--pink);
 }
 
 .lander-container {

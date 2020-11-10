@@ -19,9 +19,10 @@ export default class CourseListTeacher extends React.Component{
 
     render() {
         return (
-            <div id={'courses-bg'}>
+            <div>
                 <div id={"courses-title"} className={"text-large"}> Cursos </div>
                 <div id={'courses-box'}>
+                  <button id={'see-activities-button'} className={'normal-button'}> Ver Actividades </button>
                     {this.state.courses.map((course) => {
                         return <CourseListTeacherItem courseData={course} />
                     })}
