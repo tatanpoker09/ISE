@@ -3,9 +3,22 @@
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/forms";
 @import "../../../node_modules/bootstrap/scss/buttons";
+@import "Courses";
+
+:root{
+    --d: #3B363F;
+    --dd: #332F36;
+    --ddd: #2E292F;
+    --dddd: #232025;
+}
 
 a {
   text-decoration: none;
+}
+
+#root {
+    background-color: #332F36;
+    height: 100vh;
 }
 
 #codeForm{
@@ -27,9 +40,17 @@ a:visited {
 .text-extralarge {
     font-size: 60px;
 }
-
 .text-white {
     color: white;
+}
+.weight-normal {
+    font-weight: normal;
+}
+.weight-light {
+    font-weight: lighter;
+}
+.weight-bold {
+    font-weight: bold;
 }
 
 .shadow {
@@ -41,10 +62,12 @@ a:visited {
 }
 
 .custom-header {
-  background-color: #000000;
-  color: white;
-  text-align: right;
-  padding: 20px 40px;
+    background-color: #332F36;
+    height: 30px;
+    color: white;
+    text-align: right;
+    padding: 20px 40px;
+    box-shadow: 0px 3px 4px var(--dddd);
 }
 
 .activity-item-box {
@@ -70,31 +93,6 @@ a:visited {
 }
 
 
-#courses-box {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80vw;
-    margin: 20px auto;
-}
-
-.course-item-box {
-    background-color: black;
-    padding: 40px 15px;
-    width: 250px;
-    height: 120px;
-    border-radius: 25px;
-    margin: 20px 20px;
-    color: white;
-}
-
-.course-title {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-}
 
 #login {
     height:15%;

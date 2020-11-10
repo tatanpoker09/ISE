@@ -1,0 +1,32 @@
+
+#courses-box {
+    display:flex;
+    background-color: #232025;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 960px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+#courses-title {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+
+}
+
+
+.course-item-box {
+    background-color: #3B363F;
+    padding: 40px 15px;
+    width: 250px;
+    height: 120px;
+    border-radius: 25px;
+    margin: 20px 20px;
+    color: white;
+    cursor: pointer;
+}
