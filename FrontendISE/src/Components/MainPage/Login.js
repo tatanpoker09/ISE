@@ -26,7 +26,7 @@ class Login extends React.Component{
     loginSubmit(e) {
         e.preventDefault();
         //Login function.
-        this.props.history.push('/code');
+        this.props.history.push('/courses');
     }
 
     render() {
