@@ -4,6 +4,7 @@
 @import "../../../node_modules/bootstrap/scss/forms";
 @import "../../../node_modules/bootstrap/scss/buttons";
 @import "Courses";
+@import "Activities";
 
 :root{
     --d: #3B363F;
@@ -18,8 +19,9 @@ a {
 }
 
 #root {
-    background-color: #332F36;
-    height: 100vh;
+    background-color: var(--dd);
+    min-height: 100vh;
+    padding-bottom: 100px;
 }
 
 #codeForm{
@@ -63,37 +65,13 @@ a:visited {
 }
 
 .custom-header {
-    background-color: #332F36;
+    background-color: var(--dd);
     height: 30px;
     color: white;
     text-align: right;
     padding: 20px 40px;
     box-shadow: 0px 3px 4px var(--dddd);
 }
-
-.activity-item-box {
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 40vw;
-  margin: 20px auto;
-}
-.activity-item {
-  background-color: black;
-  padding: 40px 15px;
-  width: 450px;
-  height: 120px;
-  border-radius: 25px;
-  margin: 20px 20px;
-  color: white;
-}
-
-#courses-title {
-    text-align: center;
-    padding: 40px;
-}
-
-
 
 #login {
     height:15%;
@@ -124,9 +102,23 @@ a:visited {
     font-size: 20px;
     cursor: pointer;
     margin: 4px;
-
 }
-.normal-button:hover {
+
+.small-button {
+    background-color: var(--d);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 4px;
+}
+.normal-button:hover, .small-button:hover {
     background-color: var(--dd);
     border-style: solid ;
     border-width: 4px;
@@ -135,7 +127,7 @@ a:visited {
 }
 
 .lander-container {
-    background-color: #332f36;
+    background-color: var(--dd);
     padding-top: 50px;
     height: 100vh;
     display: flex;

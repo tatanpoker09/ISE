@@ -18,9 +18,7 @@ export const BACKEND_HOST = "localhost:3001";
 ReactDOM.render(
   <BrowserRouter>
     <Route exact path="/"><LanderView /></Route>
-    <Route path="/login">
-      <App></App>
-    </Route>
+    <Route path="/login"><App></App></Route>
     <Route path="/courses"><CourseListView /></Route>
     <Route path="/course"> <CourseView /></Route>
     <Route path="/activity"><ActivityView /></Route>

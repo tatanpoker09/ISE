@@ -1,6 +1,7 @@
 import React from 'react';
 import ActivityItem from '../Activity/ActivityItem';
 import {Button} from "react-bootstrap";
+import ActivitySelect from "../Activity/ActivitySelect";
 
 export default class CourseView extends React.Component{
     constructor(props) {
@@ -30,17 +31,10 @@ export default class CourseView extends React.Component{
       return (
           <div>
               <div class="custom-header">
-                  <a><div className={"text-medium"}>{this.state.currentCourse.title}</div></a>
+                  <a><div className={"text-small"}>{this.state.currentCourse.title}</div></a>
                   <a><div className={"text-small"}>{this.state.currentCourse.teacher}</div></a>
-
               </div>
-              <div className={"activity-item-box center-text"}>
-                  <div className={"activity-item"}>
-                      Actividad actual
-                      <h1 key={this.state.currentCourse.title}>{this.state.currentActivity.title}</h1>
-                      <Button onClick={this.enterActivity}>Ingresar</Button>
-                  </div>
-              </div>
+              <ActivitySelect/>
           </div>
       )
     }
