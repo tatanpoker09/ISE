@@ -1,0 +1,18 @@
+.activity-item {
+    background-color: black;
+    padding: 40px 15px;
+    width: 120px;
+    height: 60px;
+    border-radius: 25px;
+    margin: 20px 20px;
+    color: white;
+    text-align:center;
+}
+
+.activity-box {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+    margin: 20px auto;
+}
