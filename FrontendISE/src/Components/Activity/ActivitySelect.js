@@ -24,20 +24,21 @@ class ActivitySelect extends React.Component{
     }
 
     addActivity = (e) => {
-        let container = document.getElementById('activities-select-box');
+        let container_selected = document.getElementById('activities-select-box');
+        let container_idle = document.getElementById('activities-box');
         if (!e.added && this.state.addedActivities < 3) {
             e.added=!e.added;
             console.log('Adding', e.name);
             let activity = document.querySelector('#' + e.name);
-            let activity_clone = activity.cloneNode(true);
-            activity_clone.id = e.name + "a";
-            container.appendChild(activity_clone);
+            activity.id = e.name + "a";
+            container_selected.appendChild(activity);
             this.state.addedActivities++;
         } else if (e.added){
             e.added=!e.added;
             console.log('Removing', e.name);
             let activity = document.getElementById(e.name + 'a');
-            container.removeChild(activity);
+            activity.id = e.name
+            container_idle.appendChild(activity);
             this.state.addedActivities--;
         }
         console.log(this.state.addedActivities)
@@ -60,7 +61,7 @@ class ActivitySelect extends React.Component{
               <div id={"activities-title"} className={"text-large"}> Escoger actividades </div>
               <div id={'activities-box'}>
                   {this.state.activities.map((activity) =>
-                    <ActivityItem addActivity={this.addActivity} activity={activity}></ActivityItem>
+                    <ActivityItem addActivity={() => this.addActivity(activity)} activity={activity}></ActivityItem>
                   )}
               </div>
           </div>
