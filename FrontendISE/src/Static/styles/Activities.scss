@@ -70,7 +70,10 @@
 }
 
 .activity-item {
-    background-color: var(--d);
+    /*background-color: var(--d);*/
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/logo_ISE_white.svg');
     padding: 40px 15px 35px;
     width: 120px;
     height: 60px;

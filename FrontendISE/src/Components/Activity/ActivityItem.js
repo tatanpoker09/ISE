@@ -7,10 +7,11 @@ class ActivityItem extends React.Component {
         super(props);
         this.state = {
             activity: props.activity,
-            addActivity: props.addActivity
+            addActivity: props.addActivity,
+            image: props.activity.image,
         };
     }
-
+  
     goToActivity = (e) => {
         e.preventDefault();
         this.props.history.push('/activity');
@@ -18,7 +19,7 @@ class ActivityItem extends React.Component {
 
     render() {
         return (
-            <div className={"activity-item"} id={this.state.activity.name}>
+            <div className={"activity-item"} id={this.state.activity.name} style={{backgroundImage: "url(" + this.state.activity.image + ")"}}>
                 {this.state.activity.name}
                 <div>
                     <button onClick={() => this.state.addActivity(this.state.activity)} className={'small-button'}> {this.state.activity.added?'-':'+'} </button>
