@@ -3,21 +3,24 @@ import {withRouter} from 'react-router-dom';
 import ActivityList from "./ActivityList";
 import ActivityItem from "./ActivityItem";
 import CourseListTeacherItem from "../Course/CourseListTeacherItem";
+import earth from '../../Static/images/Earth.jpg'
+
 
 class ActivitySelect extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {courseData : props.courseData || {title: "none", teacher: "none"},
+        this.state = {
+            courseData: props.courseData || {title: "none", teacher: "none"},
             activities: [
-                { name: "uno", added: false},
-                { name: "dos", added: false},
-                { name: "tres", added: false},
-                { name: "cuatro", added: false},
-                { name: "cinco", added: false},
-                { name: "seis", added: false},
-                { name: "siete", added: false},
-                { name: "ocho", added: false},
-                { name: "nueve", added: false}
+                {name: "uno", added: false, image: earth},
+                {name: "dos", added: false, image: earth},
+                {name: "tres", added: false, image: earth},
+                {name: "cuatro", added: false, image: earth},
+                {name: "cinco", added: false, image: earth},
+                {name: "seis", added: false, image: earth},
+                {name: "siete", added: false, image: earth},
+                {name: "ocho", added: false, image: earth},
+                {name: "nueve", added: false, image: earth}
             ],
             addedActivities: 0
         }
