@@ -7,10 +7,15 @@ class ActivityView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {activity: {
-            title: "Reloj Solar",
-            rubric: " Enseñanza básica y media. Trabajo individual. Habilidades a desarrollar: comprender, aplicar. ¿El estudiante logró seguir las instrucciones? ¿Logró comprender los conceptos y aplicarlos para ver correctamente la hora?",
-            instructions: "Recorta la página 1 de la cartulina por la línea de puntos más gruesa. Dobla la cartulina recortada por la línea de puntos más fina. Pega la zona que se indica como «pegar por detrás» para conseguir mayor estabilidad en el reloj. Apoya la figura construida en una superficie horizontal, como indica el dibujo. Recorta la línea negra continua que va a servir para introducir el marcador de las horas. En la página 2 de la cartulina recorta el cuadrado en el que se señalan las horas y dóblalo por la mitad. Introduce el cuadrado doblado en la ranura que ha quedado como resultado del corte de la línea negra. La cara de verano y primavera debe mirar al norte, mientras que la de otoño e invierno ha de quedar mirando al sur. Las 12 han de coincidir con la ranura.",
-            ticket: {questions: ["¿Lograste seguir las instrucciones?", "¿Entendiste por qué el sol permite saber la hora?", "¿Lograste saber la hora utilizando el reloj?"]}}};
+            title: "Base marciana",
+            rubric: "Enseñanza media (tal vez 2do ciclo también). Trabajo grupal. Habilidades a desarrollar: comprender, evaluar y crear. ¿El estudiante logró encontrar información sobre Marte para entender sus diferencias con la Tierra? ¿Logró justificar sus decisiones en base a la información recopilada? ¿Logró modificar algo ya existente o usar algo con un fin completamente nuevo?",
+            instructions: "En un futuro se necesitará tener una base espacial en el planeta Marte. Esto permitirá aprovechar los materiales de dicho planeta y ser un punto intermedio que permita viajes a lugares más alejados en nuestro sistema solar. Su misión es leer sobre Marte, con especial atención las diferencias que posee con la Tierra. Luego, pensar las mínimas cosas que se requerirían para satisfacer las necesidades básicas humanas: respirar, alimentarse, beber agua, etc. Hay estructuras que no podrán ser iguales a las que tenemos en la Tierra, piensen en al menos 3 cambios que deban introducirse y justifiquen con la información recopilada. Por ejemplo: vehículos, invernaderos, hogares, etc. Pistas: investigar la duración del día, del año, la gravedad superficial, si hay agua, etc.",
+            ticket: {questions: [
+                "¿Lograste ayudar a otros dentro del equipo? ",
+                "¿Lograron dividir bien las tareas?",
+                "¿Lograste crear nuevos objetos o usar otros de forma novedosa?",
+                '¿Qué cosas nuevas aprendiste sobre Marte?'
+              ]}}};
         //ActivityList
         this.showActivity = props.showActivity
     }

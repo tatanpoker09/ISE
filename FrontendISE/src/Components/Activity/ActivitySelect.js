@@ -19,9 +19,9 @@ class ActivitySelect extends React.Component{
             activities: [
                 {name: "Reloj solar", added: false, image: reloj},
                 {name: "Análisis de datos", added: false, image: datos},
-                {name: "Exploración de Marte", added: false, image: marte},
+                {name: "Base marciana", added: false, image: marte},
                 {name: "Fases de la Luna", added: false, image: luna},
-                {name: "sistema solar", added: false, image: sistema_solar},
+                {name: "Sistema solar", added: false, image: sistema_solar},
             ],
             activity: null,
             addedActivities: 0,
