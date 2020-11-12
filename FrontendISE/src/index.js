@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter } from 'react-router-dom';
 import './index.css';
 import './Static/styles/App.scss';
+import './Static/styles/Activities.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LanderView from './Components/MainPage/LanderView';
