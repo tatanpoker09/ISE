@@ -29,7 +29,7 @@ export default class CourseView extends React.Component{
 
     render() {
       return (
-          <div>
+          <div id={'course-full'}>
               <div class="custom-header">
                   <a><div className={"text-small"}>{this.state.currentCourse.title}</div></a>
                   <a><div className={"text-small"}>{this.state.currentCourse.teacher}</div></a>

@@ -2,8 +2,13 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import ActivityList from "./ActivityList";
 import ActivityItem from "./ActivityItem";
+import ActivityView from "./ActivityView";
 import CourseListTeacherItem from "../Course/CourseListTeacherItem";
-import earth from '../../Static/images/Earth.jpg'
+import datos from '../../Static/images/datos.jpg'
+import marte from '../../Static/images/exploracion_marte.jpg'
+import luna from '../../Static/images/fases_luna.jpg'
+import reloj from '../../Static/images/reloj_solar.jpg'
+import sistema_solar from '../../Static/images/sistema_solar.jpg'
 
 
 class ActivitySelect extends React.Component{
@@ -12,18 +17,17 @@ class ActivitySelect extends React.Component{
         this.state = {
             courseData: props.courseData || {title: "none", teacher: "none"},
             activities: [
-                {name: "uno", added: false, image: earth},
-                {name: "dos", added: false, image: earth},
-                {name: "tres", added: false, image: earth},
-                {name: "cuatro", added: false, image: earth},
-                {name: "cinco", added: false, image: earth},
-                {name: "seis", added: false, image: earth},
-                {name: "siete", added: false, image: earth},
-                {name: "ocho", added: false, image: earth},
-                {name: "nueve", added: false, image: earth}
+                {name: "Reloj solar", added: false, image: reloj},
+                {name: "Análisis de datos", added: false, image: datos},
+                {name: "Exploración de Marte", added: false, image: marte},
+                {name: "Fases de la Luna", added: false, image: luna},
+                {name: "sistema solar", added: false, image: sistema_solar},
             ],
-            addedActivities: 0
+            activity: null,
+            addedActivities: 0,
+            show: false,
         }
+        this.showActivity = this.showActivity.bind(this);
     }
 
     addActivity = (e) => {
@@ -32,18 +36,17 @@ class ActivitySelect extends React.Component{
         if (!e.added && this.state.addedActivities < 3) {
             e.added=!e.added;
             console.log('Adding', e.name);
-            let activity = document.querySelector('#' + e.name);
-            activity.id = e.name + "a";
+            let activity = document.getElementById(e.name);
             container_selected.appendChild(activity);
             this.state.addedActivities++;
         } else if (e.added){
             e.added=!e.added;
             console.log('Removing', e.name);
-            let activity = document.getElementById(e.name + 'a');
-            activity.id = e.name
+            let activity = document.getElementById(e.name);
             container_idle.appendChild(activity);
             this.state.addedActivities--;
         }
+        this.forceUpdate();
         console.log(this.state.addedActivities)
 
 
@@ -54,9 +57,15 @@ class ActivitySelect extends React.Component{
         this.props.history.push('/report');
     }
 
+    showActivity = (e) => {
+        this.activity = e;
+        this.setState({show : !this.state.show})
+    }
+
     render() {
         return (
-          <div>
+          <div id={'activities-full'}>
+              {this.state.show?<ActivityView showActivity={this.showActivity}/>:null}
               <div id={"activities-select-title"} className={"text-large"}> Actividades escogidas </div>
               <div id={'activities-select-box'}>
                   <button id={'statistics-button'} className={'normal-button'} onClick={this.seeStats}> Ver estadísticas </button>
@@ -64,7 +73,7 @@ class ActivitySelect extends React.Component{
               <div id={"activities-title"} className={"text-large"}> Escoger actividades </div>
               <div id={'activities-box'}>
                   {this.state.activities.map((activity) =>
-                    <ActivityItem addActivity={() => this.addActivity(activity)} activity={activity}></ActivityItem>
+                    <ActivityItem addActivity={() => this.addActivity(activity)} showActivity={this.showActivity} activity={activity}/>
                   )}
               </div>
           </div>

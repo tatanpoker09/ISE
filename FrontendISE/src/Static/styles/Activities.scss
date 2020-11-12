@@ -30,6 +30,10 @@
     padding: 40px;
 
 }
+#activities-full{
+    height: 100%;
+    padding-bottom: 70px;
+}
 
 #activities-box {
     position: relative;
@@ -43,6 +47,26 @@
     border-radius: 5px;
 }
 
+#activity-full {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    padding: 100px 0 170px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+#activity-card {
+    z-index: 1001;
+    height: fit-content;
+    padding: 30px;
+    width: 750px;
+    background-color: var(--dd);
+    border-radius: 5px;
+}
 
 #statistics-button {
     position: absolute;
@@ -70,10 +94,6 @@
 }
 
 .activity-item {
-    /*background-color: var(--d);*/
-    background-size: cover;
-    background-position: center;
-    background-image: url('../images/logo_ISE_white.svg');
     padding: 40px 15px 35px;
     width: 120px;
     height: 60px;
@@ -83,7 +103,7 @@
     text-align:center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 
 }

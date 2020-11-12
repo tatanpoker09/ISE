@@ -24,8 +24,11 @@ ReactDOM.render(
     <Route path="/course"> <CourseView /></Route>
     <Route path="/activity"><ActivityView /></Route>
     <Route path="/code"><CodeView /></Route>
-    <Route path="/report"><ReportView /></Route>
-      <Route path="/select_activity"><ActivitySelect /></Route>
+    <Route path="/select_activity"><ActivitySelect /></Route>
+    <Route path='/report' component={() => {
+      window.location.href = 'http://localhost:3000/pdf-report.pdf';
+      return null;
+    }}/>
   </BrowserRouter>,
   document.getElementById('root')
 );
