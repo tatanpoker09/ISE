@@ -1,11 +1,13 @@
 import React from 'react';
-import ActivityListItem from '../Activity/ActivityListItem';
+import ActivityItem from '../Activity/ActivityItem';
+import {Button} from "react-bootstrap";
+import ActivitySelect from "../Activity/ActivitySelect";
 
 export default class CourseView extends React.Component{
     constructor(props) {
       super(props);
       this.state = {currentCourse: {title: "UWU", teacher: "AWA"},
-                    currentActivity : {title: "Astroespacial", teacher: "Lucas Muñoz"}, 
+                    currentActivity : {title: "Fases de la luna"},
                     previousActivities: [] };
     }
     
@@ -21,17 +23,19 @@ export default class CourseView extends React.Component{
 
     }
 
+    enterActivity() {
+        console.log("Entrando a la actividad");
+    }
+
     render() {
       return (
-        <div className={"course-item-box center-text"}>
-            <h1 key={this.state.currentCourse.title}>{this.state.currentCourse.title}</h1>
-          <div className={"current-activity"}><a href="">{this.state.currentCourse.title}</a></div>
-          <div className={"previous-activities"}>
-              {this.state.previousActivities.map((activity, i) => {
-                  return <ActivityListItem data={activity} />
-              })}
+          <div id={'course-full'}>
+              <div class="custom-header">
+                  <a><div className={"text-small"}>{this.state.currentCourse.title}</div></a>
+                  <a><div className={"text-small"}>{this.state.currentCourse.teacher}</div></a>
+              </div>
+              <ActivitySelect/>
           </div>
-        </div>
       )
     }
   }

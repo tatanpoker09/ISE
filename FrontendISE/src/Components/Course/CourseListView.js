@@ -1,5 +1,5 @@
 import React from "react";
-import CourseList from "./CourseList";
+import CourseListTeacher from "./CourseListTeacher";
 import StudentHeader from "../Student/StudentHeader";
 
 export default class CourseListView extends React.Component{
@@ -10,7 +10,7 @@ export default class CourseListView extends React.Component{
     return (
     <div>
         <StudentHeader />
-        <CourseList />
+        <CourseListTeacher />
     </div>
     )
   }

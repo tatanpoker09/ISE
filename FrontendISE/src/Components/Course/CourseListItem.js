@@ -13,12 +13,13 @@ class CourseListItem extends React.Component{
       /*changeCourse(this.state.courseData).then(res =>{
         console.log("Done");
       });*/
+        console.log("To course");
       this.props.history.push('/course');
     }
 
     render() {
       return (
-        <a href="">
+          <a onClick={this.goToCourse}>
             <div className={"course-item-box center-text"}>
                 <div className={"course-title text-medium"}>{this.state.courseData.title}</div>
                 <div className={"text-small"}>Profesor: {this.state.courseData.teacher}</div>
@@ -27,5 +28,4 @@ class CourseListItem extends React.Component{
       )
     }
   }
-
   export default withRouter(CourseListItem);

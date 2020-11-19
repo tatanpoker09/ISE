@@ -4,6 +4,7 @@ import CourseListItem from "./CourseListItem";
 export default class CourseList extends React.Component{
   constructor(props) {
     super(props);
+    console.log('cargando')
     this.state = {courses : [
       {title: "Astroespacial", teacher: "Lucas Muñoz"},
       {title: "Ecología", teacher: "Elias Sabja"},
@@ -19,14 +20,15 @@ export default class CourseList extends React.Component{
 
   render() {
     return (
-    <div>
-      <div id={"courses-title"} className={"text-large"}> Cursos </div>
-      <div id={'courses-box'}>
-        {this.state.courses.map((course) => {
-          return <CourseListItem courseData={course} />
-        })}
+      <div>
+        <div id={"courses-title"} className={"text-large"}> Cursos </div>
+        <div id={'courses-box'}>
+          {this.state.courses.map((course) => {
+            return <CourseListItem courseData={course} />
+          })}
+        </div>
       </div>
-    </div>
+
     )
   }
 }

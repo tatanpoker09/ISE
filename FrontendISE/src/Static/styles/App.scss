@@ -3,9 +3,27 @@
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/forms";
 @import "../../../node_modules/bootstrap/scss/buttons";
+@import "Courses";
+@import "Activities";
+
+:root{
+    --d: #3B363F;
+    --dd: #332F36;
+    --ddd: #2E292F;
+    --dddd: #232025;
+    --pink: #ec97fe;
+}
+body {
+    background-color: var(--dd);
+    font-family: "Segoe UI Light",serif;
+}
 
 a {
   text-decoration: none;
+}
+
+#root {
+    min-height: 100vh;
 }
 
 #codeForm{
@@ -27,9 +45,17 @@ a:visited {
 .text-extralarge {
     font-size: 60px;
 }
-
 .text-white {
     color: white;
+}
+.weight-normal {
+    font-weight: normal;
+}
+.weight-light {
+    font-weight: lighter;
+}
+.weight-bold {
+    font-weight: bold;
 }
 
 .shadow {
@@ -40,43 +66,19 @@ a:visited {
     z-index: -1;
 }
 
-#student-header {
-    background-color: #000000;
+.center-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-header {
+    background-color: var(--dd);
+    height: 30px;
     color: white;
     text-align: right;
     padding: 20px 40px;
-}
-
-#courses-title {
-    text-align: center;
-    padding: 40px;
-}
-
-
-#courses-box {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80vw;
-    margin: 20px auto;
-}
-
-.course-item-box {
-    background-color: black;
-    padding: 40px 15px;
-    width: 250px;
-    height: 120px;
-    border-radius: 25px;
-    margin: 20px 20px;
-    color: white;
-}
-
-.course-title {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
+    box-shadow: 0px 3px 4px var(--dddd);
 }
 
 #login {
@@ -95,9 +97,45 @@ a:visited {
     display: flex;
     justify-content: center;
 }
+.normal-button {
+    background-color: var(--d);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.small-button {
+    background-color: var(--d);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 4px;
+}
+.normal-button:hover, .small-button:hover {
+    background-color: var(--dd);
+    border-style: solid ;
+    border-width: 4px;
+    margin:0;
+    border-color: var(--pink);
+}
 
 .lander-container {
-    background-color: #332f36;
+    background-color: var(--dd);
     padding-top: 50px;
     height: 100vh;
     display: flex;
@@ -117,10 +155,6 @@ a:visited {
 }
 .margin-top-20{
   margin-top: 20px;
-}
-
-body{
-  font-family: "Segoe UI Light",serif;
 }
 
 .float-left{
