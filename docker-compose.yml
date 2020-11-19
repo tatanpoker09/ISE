@@ -1,25 +1,6 @@
 version: "3.1"
 
 services:
-  backend:
-    container_name: ise-backend
-    build: ./backend-T0
-    ports:
-     - 3001:3001
-    environment:
-      - DATABASE_PORT=5432
-      - DATABASE_HOST=localhost
-      - DATABASE_DBNAME=ISE
-      - DATABASE_PASSWORD=root
-      - DATABASE_USER=ISEAdmin
-    volumes:
-     - .:/code
-    restart: always
-    command:
-      - /bin/sh
-      - -c
-      - |
-        npm run start --prefix backend-T0
   frontend:
     tty: true
     environment:
@@ -27,25 +8,23 @@ services:
     build: ./FrontendISE
     container_name: ise-frontend
     restart: always
-    links:
-      - "backend:localhost"
     ports:
       - 3000:3000
     volumes:
       - ./front:/front
       - /front/node_modules
   postgres:
-    build: ./DatabaseISE
-    container_name: ise-database
-    ports:
-      - 5432:5432
-    volumes:
-      - my_dbdata:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: ISE
-      POSTGRES_USER: ISEAdmin
-    expose:
-      - 5432
+      image: "postgres:12"
+      container_name: ise-database
+      ports:
+        - 5432:5432
+      volumes:
+        - my_dbdata:/var/lib/postgresql/data
+      links:
+        - "frontend"
+      environment:
+        POSTGRES_PASSWORD: root
+      expose:
+        - 5432
 volumes:
   my_dbdata:
