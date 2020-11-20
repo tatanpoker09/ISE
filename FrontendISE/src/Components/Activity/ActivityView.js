@@ -23,7 +23,7 @@ class ActivityView extends React.Component {
     showStats = () => {
       this.props.history.push('/report');
     }
-    showStats = () => {
+    tryGame = () => {
       this.props.history.push('/MoonGame');
     }
 
@@ -54,7 +54,7 @@ class ActivityView extends React.Component {
                   <button className={'normal-button'} onClick={this.showStats}>Ver reporte</button>
                 </div>
                 <div className={'center-child'}>
-                  <button className={'normal-button'} onClick={this.showStats}>Probar Actividad</button>
+                  <button className={'normal-button'} onClick={this.tryGame}>Probar Actividad</button>
                 </div>
 
 
